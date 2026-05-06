@@ -24,9 +24,9 @@ export function AnimatedTabs() {
   const activeContent = tabs.find((tab) => tab.id === activeTab)?.content || []
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
+    <div className="w-full max-w-4xl mx-auto px-0 sm:px-4">
       {/* Tab List - Compact width */}
-      <motion.div ref={tabsRef} className="cursor-pointer relative inline-flex items-center gap-1 p-1 bg-muted rounded-lg mb-8" animate={{ filter: ["blur(10px)", 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.5, delay: 0.8 }}>
+      <motion.div ref={tabsRef} className="cursor-pointer relative inline-flex items-center gap-1 p-1 bg-muted rounded-lg mb-8 overflow-x-auto max-w-full" animate={{ filter: ["blur(10px)", 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.5, delay: 0.8 }}>
         {tabs.map((tab) => (
           <button
             key={tab.id}

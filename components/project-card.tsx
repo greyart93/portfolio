@@ -49,7 +49,7 @@ export function ProjectCard({ title, description, image, url }: ProjectCardProps
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2 }}
             style={{ x, y }}
-            className="absolute z-50 pointer-events-none w-80 h-48 rounded-lg overflow-hidden  border border-border"
+            className="absolute z-50 pointer-events-none w-80 h-48 rounded-lg overflow-hidden  border border-border hidden md:block"
           >
             <img src={image || "window.svg"} alt={title} className="w-full h-full object-cover" />
           </motion.div>

@@ -6,7 +6,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { motion } from "motion/react"
 import Social_Links from "@/constants/Social_Links"
 import { AnimatedTabs } from "@/components/animated-tabs"
-// import { User, Settings, CreditCard, Bell } from "lucide-react"
 import TabContents from "@/constants/Tab_Contents";
 import Footer from "@/components/footer"
 // import ContactMe from "@/components/ContactMe"
@@ -21,11 +20,11 @@ export default function Home() {
     // Root Div
     <motion.div className={` min-h-screen flex justify-center`}>
       {/* Theme Toggle */}
-      <div className="fixed top-4 right-4"><ModeToggle /></div>
+      <div className="fixed top-3 right-3 z-50"><ModeToggle /></div>
       {/* Main Div */}
-      <div className=" mt-12 p-8 rounded-lg max-w-2xl text-xl" >
+      <div className=" mt-8 px-5 sm:px-8 py-8 rounded-lg max-w-2xl w-full text-base lg:text-xl" >
         {/* GitHub Avatar */}
-        <MotionAvatar className={"mb-4 h-14 w-14"} animate={{ scale: [0, 1], filter: ['blur(10px)', 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.5, delay: 0.1 }}>
+        <MotionAvatar className={"mb-4 h-14 w-14 mt-2 sm:mt-0"} animate={{ scale: [0, 1], filter: ['blur(10px)', 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.5, delay: 0.1 }}>
           <AvatarImage src="github_pic.png" />
           <AvatarFallback>:)</AvatarFallback>
         </MotionAvatar>
@@ -48,9 +47,9 @@ export default function Home() {
           <Link href="mailto:saudmullaji05@gmail.com">Email</Link>
         </motion.div> */}
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row flex-wrap gap-4 mt-6 justify-center sm:justify-start">
         {Social_Links.map(({ url, name }, index) => (
-          <motion.div key={index} className="mt-6 flex space-x-4 text-sm font-light cursor-pointer" animate={{ filter: ['blur(10px)', 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}>
+          <motion.div key={index} className="flex sm:justify-center space-x-4 text-sm font-light cursor-pointer" animate={{ filter: ['blur(10px)', 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}>
             <Link href={url}>{name}</Link>
           </motion.div>
         ))  }
@@ -62,7 +61,7 @@ export default function Home() {
         {/* Tabs for Projects and Blog */}
         <AnimatedTabs />
         {/* <ContactMe /> */}
-        <Footer />
+          <Footer />        
 
       </div>
       
