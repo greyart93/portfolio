@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saud Mullaji — Portfolio
+
+Personal portfolio website built with **Next.js**, **TypeScript**, and **TailwindCSS**.
+
+🔗 **Live:** [portfolio-saud-xi.vercel.app](https://portfolio-saud-xi.vercel.app)
+
+---
+
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org) — React framework
+- [TypeScript](https://www.typescriptlang.org) — Type safety
+- [TailwindCSS](https://tailwindcss.com) — Styling
+- [Motion](https://motion.dev) — Animations
+- [shadcn/ui](https://ui.shadcn.com) — UI components
+- [next-themes](https://github.com/pacocoursey/next-themes) — Dark / light / system theme
+
+---
+
+## Features
+
+- Animated hero section with blur-in transitions
+- Projects & Blog tabs with animated tab switching
+- Hover image preview on project cards (desktop)
+- Dark / light / system theme toggle
+- Fully responsive — mobile to desktop
+- Social links with smooth animations
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Run dev server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+portfolio/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── animated-tabs.tsx
+│   ├── footer.tsx
+│   ├── link.tsx
+│   ├── project-card.tsx
+│   ├── theme-provider.tsx
+│   ├── themeToggle.tsx
+│   └── ui/
+├── constants/
+│   ├── Social_Links.ts
+│   ├── Project_Content.ts
+│   └── Tab_Contents.ts
+└── public/
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deployed on [Vercel](https://vercel.com). Any push to `master` triggers an automatic deployment.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by Saud Mullaji
