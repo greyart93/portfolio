@@ -1,5 +1,5 @@
 const socialLinks = [
-    { url: "Saud__Mullaji__Resume.pdf", name: "Resume" },
+    { url: "saud_cv.pdf", name: "Resume" },
     { url: "https://github.com/greyart93", name: "Github" },
     { url: "https://www.linkedin.com/in/mohd-saud-mullaji-41b638380/", name: "LinkedIn" },
     { url: "https://leetcode.com/u/saud07/", name: "LeetCode" },
