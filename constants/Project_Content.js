@@ -13,6 +13,13 @@ const ProjectContents = [
     image: "/codevit.png",
     url: 'https://codevit.vercel.app/'
   },
+  {
+    id: 3,
+    title: "Getic - CRM Support Ticket web app",
+    description: "A full-stack CRM support ticket web app",
+    image: "/image.png",
+    url: "https://getic.vercel.app"
+  }
   //  {
   //   id: 3,
   //   title: "TaskFlow - Project Management Tool",
