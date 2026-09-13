@@ -8,6 +8,7 @@ import Social_Links from "@/constants/Social_Links"
 import { AnimatedTabs } from "@/components/animated-tabs"
 import TabContents from "@/constants/Tab_Contents";
 import Footer from "@/components/footer"
+import SocialLinksComponent from "@/components/socialLinks"
 // import ContactMe from "@/components/ContactMe"
 
 const MotionAvatar = motion.create(Avatar)
@@ -47,13 +48,17 @@ export default function Home() {
           <Link href="mailto:saudmullaji05@gmail.com">Email</Link>
         </motion.div> */}
 
+        {/* 
         <div className="flex flex-row flex-wrap gap-4 mt-6 justify-center sm:justify-start">
-        {Social_Links.map(({ url, name }, index) => (
+        {Social_Links.map(({ url, name, icon: Icon }, index) => (
           <motion.div key={index} className="flex sm:justify-center space-x-4 text-sm font-light cursor-pointer" animate={{ filter: ['blur(10px)', 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}>
+            {Icon && <Icon size={26} className="text-gray-400 group-hover:text-white transition-colors" />}
             <Link href={url}>{name}</Link>
           </motion.div>
         ))  }
         </div>
+        */}
+        <SocialLinksComponent />
 
         {/* Divider */}
         <motion.hr className="my-8 border-gray-300 dark:border-gray-700" animate={{ filter: ['blur(10px)', 'blur(0px)'], opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.5, delay: 0.5 }} />
